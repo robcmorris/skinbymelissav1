@@ -1,0 +1,41 @@
+.services-section {
+  color: black;
+  background-color: white;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+
+  h2 {
+    font-size: 3em;
+    color: $primary;
+  }
+
+  h3 {
+    font-family: 'Oswald', sans-serif;
+    padding-top: 40px;
+    letter-spacing: 0.1em;
+    text-shadow: 0 1px 1px rgba(0, 0, 0, .7);
+  }
+
+  table {
+    width: 100%;
+    font-size: 1em;
+
+    th {
+      font-family: 'Oswald', sans-serif;
+      font-weight: 100;
+      color: $primary;
+      background-color: lighten($secondary, 3%) !important;
+    }
+
+    i {
+      color: $primary;
+    }
+  }
+}
+
+.table-striped > tbody > tr:nth-child(odd) > td,
+.table-striped > tbody > tr:nth-child(odd) > th {
+  background-color: lighten($primary, 45%);
+}

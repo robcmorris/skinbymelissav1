@@ -1,0 +1,79 @@
+#mainNav {
+  font-family: 'Yellowtail', cursive;
+  margin-bottom: 0;
+  border-bottom: 1px solid fade-out(white, .7);
+  background-color: white;
+
+  img {
+    max-width: 50px;
+  }
+
+  .navbar-toggler {
+    font-size: 14px;
+    padding: 11px;
+    color: $primary;
+    border: 1px solid white;
+    outline: 0;
+  }
+
+  .navbar-brand {
+    font-size: 2em;
+    font-weight: bold;
+    font-kerning: 1px;
+  }
+
+  a {
+    color: $primary;
+  }
+
+  .navbar-nav {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 200;
+    font-size: 1.2em;
+    text-shadow: 0 1px 1px rgba(0, 0, 0, .2);
+
+    .nav-item {
+      -webkit-transition: background 0.3s ease-in-out;
+      -moz-transition: background 0.3s ease-in-out;
+      transition: background 0.3s ease-in-out;
+
+      &:hover {
+        color: fade($primary, 80%);
+        outline: none;
+        background-color: transparent;
+      }
+
+      &:active,
+      &:focus {
+        outline: none;
+        background-color: transparent;
+      }
+    }
+  }
+  @media(min-width:992px) {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    -webkit-transition: background 0.3s ease-in-out, padding-top 0.3s ease-in-out, padding-bottom 0.3s;
+    -moz-transition: background 0.3s ease-in-out, padding-top 0.3s ease-in-out, padding-bottom 0.3s;
+    transition: background 0.3s ease-in-out, padding-top 0.3s ease-in-out, padding-bottom 0.3s;
+    letter-spacing: 1px;
+    border-bottom: 10px $primary;
+    background: white;
+
+    &.navbar-shrink {
+      padding-top: 10px;
+      padding-bottom: 10px;
+      border-bottom: 1px solid fade-out(white, .7);
+      background: white;
+    }
+
+    .nav-link.active {
+      outline: none;
+      background-color: rgba($secondary, .3);
+
+      &:hover {
+        color: $secondary;
+      }
+    }
+  }
+}

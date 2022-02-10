@@ -1,0 +1,186 @@
+// Import Globals
+@import 'variables.scss';
+@import 'mixins.scss';
+// Main Styling
+body {
+  text-rendering: optimizeLegibility;
+  font-family: 'Roboto', sans-serif, Arial, sans-serif;
+  font-size: 1em;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  color: white;
+  background-color: #8C54BC;
+}
+
+html {
+  width: 100%;
+  height: 100%;
+}
+
+h1,
+h2,
+h3 {
+  color: $secondary;
+  font-family: 'Yellowtail', cursive;
+  margin: 0 0 35px;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 1);
+}
+
+,
+h4,
+h5,
+h6 {
+  color: $secondary;
+  font-family: 'Yellowtail', cursive;
+  font-weight: 400;
+  margin: 0;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 1);
+}
+
+p {
+  font-size: 1em;
+  @media(min-width: 768px) {
+    font-size: 1em;
+  }
+}
+
+a {
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  color: $primary;
+
+  &:focus,
+  &:hover {
+    text-decoration: none;
+    color: darken($primary, 20%);
+  }
+}
+
+.fullscreen-bg {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  overflow: hidden;
+  z-index: -100;
+}
+
+.fullscreen-bg__video {
+  position: absolute;
+  top: -50px;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  min-width: 100%;
+  min-height: 100%;
+  z-index: -100;
+}
+@media (min-aspect-ratio: 16/9) {
+  .fullscreen-bg__video {
+    height: 300%;
+    top: -100%;
+  }
+}
+@media (max-aspect-ratio: 16/9) {
+  .fullscreen-bg__video {
+    width: 300%;
+    left: -100%;
+  }
+}
+@media (max-width: 767px) {
+  .fullscreen-bg {
+    background: url('../img/videoframe.jpg') center center / cover no-repeat;
+  }
+
+  .fullscreen-bg__video {
+    display: none;
+  }
+}
+
+.content-section {
+  background-color: $primary;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.btn {
+  font-family: 'Roboto', sans-serif, Helvetica, Arial, sans-serif;
+  font-size: 1em;
+  font-weight: 400;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  text-transform: uppercase;
+  border-radius: 0;
+}
+
+.btn-default {
+  color: $secondary;
+  border: 1px solid $secondary;
+  background-color: transparent;
+
+  &:focus,
+  &:hover {
+    color: white;
+    border: 1px solid white;
+    outline: none;
+    background-color: $secondary;
+  }
+}
+
+ul.banner-social-buttons {
+  margin-top: 0;
+  @media(max-width: 1199px) {
+    margin-top: 15px;
+  }
+  @media(max-width:767px) {
+    li {
+      display: block;
+      margin-bottom: 20px;
+      padding: 0;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+}
+
+#about {
+  img {
+    border-width: 5px !important;
+  }
+}
+// Imports SCSS for Body Sections
+@import 'nav.scss';
+@import 'masthead.scss';
+@import 'map.scss';
+@import 'services.scss';
+@import 'footer.scss';
+// Final bits
+::-moz-selection {
+  background: $primary;
+  background: fade-out(white, .8);
+  text-shadow: none;
+}
+
+::selection {
+  background: $primary;
+  background: fade-out(white, .8);
+  text-shadow: none;
+}
+
+img::selection {
+  background: transparent;
+}
+
+img::-moz-selection {
+  background: transparent;
+}
+
+body {
+  -webkit-tap-highlight-color: fade-out(white, .8);
+}

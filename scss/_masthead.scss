@@ -1,0 +1,65 @@
+.masthead {
+  display: table;
+  width: 100%;
+  height: auto;
+  padding: 200px 0;
+  background-color: rgba(143, 75, 186, 0.35);
+  text-align: center;
+  color: $secondary;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+
+  .intro-body {
+    font-family: 'Oswald', sans-serif;
+    display: table-cell;
+    vertical-align: middle;
+
+    .brand-heading {
+      text-shadow: 0 1px 1px rgba(0, 0, 0, 1), 0 5px 5px rgba(0, 0, 0, 0.4), 0 8px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    .intro-text {
+      color: white;
+      font-size: 28px;
+    }
+  }
+  @media(min-width:768px) {
+    height: 100%;
+    padding: 0;
+
+    .intro-body {
+      .brand-heading {
+        font-size: 100px;
+        text-shadow: 0 1px 1px rgba(0, 0, 0, 1);
+      }
+
+      .intro-text {
+        font-size: 30px;
+      }
+    }
+  }
+}
+
+.btn-circle {
+  font-size: 26px;
+  width: 55px;
+  height: 55px;
+  margin-top: 15px;
+  line-height: 38px;
+  -webkit-transition: background 0.3s ease-in-out;
+  -moz-transition: background 0.3s ease-in-out;
+  transition: background 0.3s ease-in-out;
+  color: $primary;
+  border: 2px solid white;
+  border-radius: 100% !important;
+  background: transparent;
+
+  &:focus,
+  &:hover {
+    color: white;
+    outline: none;
+    background: fade-out(white, .9);
+  }
+}
